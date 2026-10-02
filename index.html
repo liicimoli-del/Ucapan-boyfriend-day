@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Boyfriend Day! ❤️</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffe5ec;
+            color: #4c1130;
+            text-align: center;
+            padding: 30px 20px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 90vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 35px 25px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(255, 71, 126, 0.2);
+            max-width: 480px;
+            width: 100%;
+            z-index: 10;
+            border: 2px solid #ffb3c6;
+        }
+        h1 {
+            color: #ff477e;
+            font-size: 26px;
+            margin-bottom: 5px;
+        }
+        .date {
+            font-size: 14px;
+            color: #ff7096;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+        }
+        .message {
+            font-size: 16px;
+            line-height: 1.7;
+            text-align: justify;
+            text-justify: inter-word;
+            margin-bottom: 20px;
+            background: #fff0f3;
+            padding: 15px;
+            border-radius: 15px;
+            border-left: 4px solid #ff477e;
+        }
+        .love-btn {
+            background-color: #ff477e;
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(255, 71, 126, 0.4);
+        }
+        .love-btn:hover {
+            background-color: #ff7096;
+            transform: scale(1.05);
+        }
+        /* Style untuk animasi hati berjatuhan */
+        .heart {
+            position: absolute;
+            color: #ff477e;
+            font-size: 20px;
+            position: fixed;
+            top: -10%;
+            row-gap: 0;
+            z-index: 1;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            to {
+                transform: translateY(110vh);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Happy National Boyfriend Day! 💖</h1>
+        <div class="date">3 OKTOBER</div>
+        
+        <div class="message">
+            Happy Boyfriend Day, pikboo🤏🏻 gomawoo for being the sweetest and funniest boyfriend, makasih udah selalu ada buat aku, udah selalu sabar nemenin aku, dan dengerin semua cerita random aku yang bikin hari" aku jadi jauh lebih seru, u really are my favorite person in the world🌹
+        </div>
+
+        <div class="message">
+            I promise to always stay by ur side & bakal terus dengerin cerita kamu juga, doaku semoga kita bisa terus bareng" ya, grow together, dan makin kompak ke depannya. Happy Boyfriend Day, my lil boyy pikboo🤍🤏🏻
+        </div>
+        
+        <button class="love-btn" onclick="alert('I Love You More, Pikboo! ❤️ Forever and always.')">Klik Aku! ✨</button>
+    </div>
+
+    <!-- Script untuk membuat efek hati berjatuhan secara otomatis -->
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+            heart.style.opacity = Math.random();
+            heart.style.fontSize = Math.random() * 15 + 15 + 'px';
+            
+            document.body.appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+        setInterval(createHeart, 300);
+    </script>
+
+</body>
+</html>
